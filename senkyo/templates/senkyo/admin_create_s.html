@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+  <h2><span class="under_kouho">政党情報入力フォーム</span></h2>
+  <h3>新規政党の場合は登録してください。</h3>
+  <form action="{% url 'admin_seitou' %}" method="post">
+    {% csrf_token %}
+    <div>
+      <label for="seitou_nameInput">政党名</label>
+      <input id="seitou_nameInput" name="seitou_name" type="text" placeholder="みかん党" required="required">
+    </div>
+    <div>
+      <label for="bodyInput">政党説明</label>
+      <textarea id="bodyInput" name="body" row="3" placeholder="政党の詳細を入力してください。" required="required"></textarea>
+    </div>
+    <div>
+      <button type="submit">登録</button>
+    </div>
+  </form>
+  <h3>----- 現在登録済みの政党一覧 -----</h3>
+
+  {% for tou in tous %}
+  [ {{ tou.seitou_name }} ]
+  {% endfor %}
+  <div class="back">
+    <a href="{% url 'admin_index' %}">TOPに戻る</a>
+  </div>
+</body>
+
+</html>

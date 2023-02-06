@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+    <h2>編集するには氏名をクリックしてください。</h2>
+    <hr>
+    {% for kouho in kouhos %}
+    <img src="{% static 'images/kao.jpeg' %}" alt="顔写真イメージ" height="120px" width="80px">
+    <p><strong>氏名: </strong><button><a href="{% url 'admin_detail' kouho.id %}">{{ kouho.name }}</a></button>
+        ({{ kouho.age }}) </p>
+    <p><strong>所属政党:</strong> {{ kouho.tou }}</p>
+    <p><strong>経歴:</strong> {{ kouho.career }}</p>
+    <p><strong>公約: [{{ kouho.manifesto_class }}]</strong></p>
+    <p>{{ kouho.manifesto }}</p>
+    <p>
+        <a href={{ kouho.instagram }}><img src="{% static 'images/instagram.png' %}" alt="インスタグラム" height="40px"
+                width="40px"></a>
+        <a href={{ kouho.twitter }}><img src="{% static 'images/twitter.png' %}" alt="ツイッター" height="40px"
+                width="40px"></a>
+        <a href={{ kouho.facebook }}><img src="{% static 'images/facebook.png' %}" alt="フェイスブック" height="40px"
+                width="40px"></a>
+    </p>
+    <hr>
+    {% endfor %}
+    <div class="back">
+        <a href="{% url 'admin_index' %}">TOPに戻る</a>
+    </div>
+</body>
+
+</html>

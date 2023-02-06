@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+    <h2>編集画面</h2>
+    <form action="{% url 'admin_update' kouho.id %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="nameInput">氏名</label>
+            <input id="nameInput" name="name" type="text" value={{ kouho.name }} required="required">
+        </div>
+        <div>
+            <label for="ageInput">年齢</label>
+            <input id="ageInput" name="age" type="number" value={{ kouho.age }} required="required">
+        </div>
+        <div>
+            <label for="kaoInput">顔写真</label>
+            <input id="kaoInput" name="kao" type="file" value={{ kouho.kao }}>
+        </div>
+        <div>
+            <label for="touInput">所属政党</label>
+            <input id="touInput" name="tou" type="text" value={{ kouho.tou }} required="required">
+        </div>
+        <div>
+            <label for="careerInput">経歴</label>
+            <textarea id="careerInput" name="career" row="3" required="required">{{ kouho.career }}</textarea>
+        </div>
+        <div>
+            <label for="manifesto_classInput">選挙公約分類</label>
+            <input id="manifesto_classInput" name="manifesto_class" type="hidden" required="required">
+            <select name="manifesto_class" id="manifesto_classInput">
+                <option value="自然保護">自然保護</option>
+                <option value="経済政策">経済政策</option>
+                <option value="消費税減税">消費税減税</option>
+                <option value="外国政策">外国政策</option>
+                <option value="社会問題対策">社会問題対策</option>
+            </select>
+        </div>
+        <div>
+            <label for="manifestoInput">選挙公約</label>
+            <textarea id="manifestoInput" name="manifesto" row="3" required="required">{{ kouho.manifesto }}</textarea>
+        </div>
+        <div>
+            <label for="instagramInput">instagram</label>
+            <input id="instagramInput" name="instagram" type="url" value={{ kouho.instagram }}>
+        </div>
+        <div>
+            <label for="twitterInput">twitter</label>
+            <input id="twitterInput" name="twitter" type="url" value={{ kouho.twitter }}>
+        </div>
+        <div>
+            <label for="facebookInput">facebook</label>
+            <input id="facebookInput" name="facebook" type="url" value={{ kouho.facebook }}>
+        </div>
+        <hr>
+        <div>
+            <button type="submit">確認画面へ</button>
+            <button><a href="{% url 'admin_delete' kouho.id %}">削除</a></button>
+        </div>
+
+    </form>
+    <div class="back">
+        <a href="{% url 'admin_kouho' %}">一つ戻る</a>
+    </div>
+</body>
+
+</html>

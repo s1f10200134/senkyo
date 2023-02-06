@@ -1,0 +1,81 @@
+/*上書き部分*/
+header {
+  border-bottom: #4dafffa7 solid 2px;
+}
+
+header .menu a.hseitou {
+  color: #4dafffa7;
+}
+
+/*専用部分*/
+.content {
+  padding-left: 6px;
+  text-align: center;
+}
+
+.seitou_name {
+  font-size: 30px;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: rgb(0, 0, 0);
+  background-color: #eef6fb;
+  padding: 3px 50px 3px 50px;
+  border: 1px solid #4dafffa7;
+}
+
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: rgb(255, 255, 255);
+  background: #4dafffa7;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 210px;
+}
+
+.seitou {
+  width: calc(100%/4);
+  padding: 15px;
+  margin: 2em;
+  background: #b5ddf7;
+  color: #000;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.03);
+  transform: rotate(2deg);
+  word-break: break-all;
+  margin: 10px;
+}
+
+.seitou p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.sample_box11_tape {
+  width: 50%;
+  height: 35px;
+  margin: -25px auto 0;
+  background: #989898;
+  transform: rotate(-3deg);
+  opacity: 0.1;
+}
+
+.seitou__name {
+  text-align: center;
+  font-size: 30px !important;
+  margin-top: 10px !important;
+}
+
+.seitou__button {
+  text-align: center;
+  font-size: 1em !important;
+  margin-bottom: 1em !important;
+}

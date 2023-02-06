@@ -1,0 +1,172 @@
+/*上書き部分*/
+body {
+  text-align: center;
+}
+
+header {
+  border-bottom: #ffa500 solid 2px;
+}
+
+header .menu a.hkouho {
+  color: #ffa500;
+}
+
+/*専用部分*/
+.content {
+  padding: 0px 100px 0px 100px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin: 40px 0 30px 0;
+}
+
+.box{
+  padding: 10px;
+  margin: 0px 550px;
+  background: #ff811a95;
+  border-bottom: solid 6px #ff811a95;
+  border-radius: 9px;
+}
+
+.content h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*ボタン*/
+.back  button{
+  background: #d3d3d3;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 25px;
+  color: #1b2538;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.back button:hover {
+  background: #ff811a95;
+  color: #FFF;
+}
+
+.back button:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #ff811a95;
+  border-right: 3px solid #ff811a95;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.back button:hover:after {
+  border-color: #FFF;
+}
+
+/*見出し*/
+.under_kouho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  text-align: center;
+}
+
+.under_kouho::before,
+.under_kouho::after {
+  content: '';
+  width: 70px;
+  height: 3px;
+  background-color: #ff811a95;
+}
+
+.under_kouho::before {
+  margin-right: 20px;
+}
+
+.under_kouho::after {
+  margin-left: 20px;
+}
+
+/*名前検索*/
+label[for="s1"] {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*ボックス*/
+input[type="search"] {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  border: solid 2px #000000;
+}
+
+/*政党名検索*/
+label[for="s2"] {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*政策で検索*/
+label[for="s3"] {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*チェックボックス*/
+label[for="s4"] {
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*検索ボタン*/
+.poti a {
+  background: #D3D3D3;
+  border-radius: 50px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 25px;
+  color: #1B2538;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.poti a:hover {
+  background: #ff811a95;
+  color: #FFF;
+}
+
+.poti a:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #ff811a95;
+  border-right: 3px solid #ff811a95;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.poti a:hover:after {
+  border-color: #FFF;
+}

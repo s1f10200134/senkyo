@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+
+  <span class="back">
+    <p>現在の編集者: {{ user.username }}</p>
+    <a href="{% url 'logout' %}">ログアウトして使用者画面へ</a>
+  </span>
+  <br>
+  <br>
+  <br>
+  <div class="back">
+    <p>
+      <a href="{% url 'admin_create' %}">候補者情報入力フォーム</a>
+    </p>
+    <p>
+      <a href="{% url 'admin_kouho' %}">候補者情報を編集</a>
+    </p>
+    <p>
+      <a href="{% url 'admin_create_s' %}">政党情報入力フォーム</a>
+    </p>
+    <p>
+      <a href="{% url 'admin_seitou' %}">政党情報を編集</a>
+    </p>
+  </div>
+</body>
+
+</html>

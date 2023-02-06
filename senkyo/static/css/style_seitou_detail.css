@@ -1,0 +1,92 @@
+/*上書き部分*/
+body {
+    margin-top: 150px;
+}
+
+header {
+    border-bottom: #4dafffa7 solid 2px;
+}
+
+header .menu a.hseitou {
+    color: #4dafffa7;
+}
+
+.footer {
+    margin-top: 235px;
+}
+
+/*専用部分*/
+.content {
+    text-align: center;
+    padding: 0px 264px 0px 264px;
+    overflow-wrap: normal;
+  }
+  
+.content h2{
+    font-size: 40px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.seitou {
+    width: calc(100%/4);
+    /* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 2em;
+    background: #b5ddf7;
+    /* 紙の色 */
+    color: #000;
+    /* 文字色 */
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.03);
+    transform: rotate(2deg);
+    word-break: break-all;
+    margin: 10px;
+}
+
+.seitou p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+/*ボタン*/
+.back a {
+    background: #d3d3d3;
+    border-radius: 50px;
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 10px 25px;
+    color: #1b2538;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.back a:hover {
+    background: #4dafffa7;
+    color: #FFF;
+}
+
+.back a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #4dafffa7;
+    border-right: 3px solid #4dafffa7;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.back a:hover:after {
+    border-color: #FFF;
+}

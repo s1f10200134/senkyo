@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+  <h2><span class="under_seitou">確認画面</span></h2>
+  <p><strong>政党名: </strong>{{ seitou.seitou_name }}</p>
+  <p><strong>政党詳細: </strong>{{ seitou.body }}</p>
+
+  <div class="back">
+    <p><a href="{% url 'admin_seitou' %}">編集完了</a></p>
+    <p><a href="{% url 'admin_update_s' seitou.id %}">戻る</a></p>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/headerfooter.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_qa.css' %}">
+</head>
+
+<body>
+  <header>
+    <a href="{% url 'index' %}"><img src="{% static 'images/site_rogo.png' %}" height="35.44px" width="183.68x"></a>
+    <ul class="menu">
+      <a href="{% url 'detail' %}" class="hdetail">選挙で何が決まる</a>
+      <a href="{% url 'seitou' %}" class="hseitou">政党を知る</a>
+      <a href="{% url 'kouho' %}" class="hkouho">候補者を見つける</a>
+      <a href="{% url 'koe' %}" class="hkoe">みんなの声</a>
+      <a href="{% url 'qa' %}" class="hqa">Q&A</a>
+      <a href="{% url 'mail' %}" class="hmail">メール配信サービス</a>
+    </ul>
+  </header>
+
+
+  <div class="content">
+    <h2>Q&A</h2>
+    <div class="cp_qa">
+      <div class="cp_actab">
+        <input id="cp_tabfour011" type="checkbox" name="tabs">
+        <label for="cp_tabfour011">Q 18歳になったら誰でも選挙権があるのですか？</label>
+        <div class="cp_actab-content">
+          <p>A 選挙権は日本国憲法にもある国民の権利の1つで、満18歳以上の日本国民であれば得ることが出来ます。（市区町村で例外あり）</p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour012" type="checkbox" name="tabs">
+        <label for="cp_tabfour012">Q 投票日の時間がわかりません。</label>
+        <div class="cp_actab-content">
+          <p>A 朝7時から夜の8時までです。</p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour013" type="checkbox" name="tabs">
+        <label for="cp_tabfour013">Q「選挙のお知らせ」を紛失してしまいました。</label>
+        <div class="cp_actab-content">
+          <p>A 紛失したり、持参するのを忘れた場合でも、住所・氏名・生年月日をお聞きして選挙人名簿に登録されているかを確認できます。身分証明書は必要ありません。</p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour014" type="checkbox" name="tabs">
+        <label for="cp_tabfour014">Q 投票日に都合が悪く行けません。</label>
+        <div class="cp_actab-content">
+          <p>A 投票日に投票所へ向かえない場合、期日前投票という制度があります。公示翌日から前日まで毎日できます。</p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour015" type="checkbox" name="tabs">
+        <label for="cp_tabfour015">Q 投票日当日はどこの投票所に行けばいいのですか？</label>
+        <div class="cp_actab-content">
+          <p>A 住んでいる地域によって投票所が決められています。当日の投票所は「選挙のお知らせ」に記載されているのでご確認ください。</p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour016" type="checkbox" name="tabs">
+        <label for="cp_tabfour016">Q 立候補は何歳からできますか？</label>
+        <div class="cp_actab-content">
+          <p>
+            ・衆議院議員選挙は日本国民で満25歳以上の人。<br>
+            ・参議院議員選挙は日本国民で満30歳以上の人。<br>
+            ・都道府県知事は日本国民で満30歳以上の人。<br>
+            ・都道府県議会議員は日本国民で満25歳以上、その都道府県議会議員の選挙権を持っていること。<br>
+            ・市区町村長は日本国民で満25歳以上の人。<br>
+            ・市区町村議会議員は日本国民で満25歳以上、その市区町村議会議員の選挙権を持っていること。<br>
+            　以上が立候補の条件です。
+          </p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour017" type="checkbox" name="tabs">
+        <label for="cp_tabfour017">Q 衆議院議員総選挙の投票所では、最高裁判所の裁判官の氏名が書かれた投票用紙が渡されるそうですがこれも選挙なのですか？</label>
+        <div class="cp_actab-content">
+          <p>A
+            これは「最高裁判所裁判官国民審査」と言い、すでに任命されている最高裁判所の裁判官を辞めさせるべきか国民が決める制度です。議員や都道府県知事、市区町村長といった特定の職に就くべき者を国民が選ぶ選挙とは異なる制度です。
+          </p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour018" type="checkbox" name="tabs">
+        <label for="cp_tabfour018">Q 最高裁判所裁判官国民審査にはどのような人が審査を行う権利を有するのですか？</label>
+        <div class="cp_actab-content">
+          <p>A 日本国民である満18歳以上の者に審査を行う権利である審査権が与えられます。衆議院議員の選挙権を有する人が審査権を有することになります。審査は選挙と同じく投票により行い、一人一票です。</p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour019" type="checkbox" name="tabs">
+        <label for="cp_tabfour019">Q なぜ国民審査では「×」をつけるのですか？辞めさせたくない裁判官に「○」をつけても良いですか？</label>
+        <div class="cp_actab-content">
+          <p>A
+            国民審査は最高裁判所裁判官の解職の制度として設けられているので、辞めさせたい意思がある裁判官に「×」を記載するものとされています。辞めさせたい意思がない裁判官については投票用紙の記載欄に何も記載せずに、投票箱に入れなければならないとされています。投票用紙に「×」以外の事項を記載した投票は無効となります。
+          </p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour020" type="checkbox" name="tabs">
+        <label for="cp_tabfour020">Q 投票日に用事があるのですが、期日前投票（不在者投票）はできますか？</label>
+        <div class="cp_actab-content">
+          <p>A
+            国民審査においても衆議院議員総選挙と同様、審査期日（投票日）に一定の事由に該当すると見込まれる方は期日前投票（不在者投票）をすることができます。原則として総選挙の公示日の翌日から選挙期日の前日までの間、行うことができます。
+          </p>
+        </div>
+      </div>
+      <div class="cp_actab">
+        <input id="cp_tabfour021" type="checkbox" name="tabs">
+        <label for="cp_tabfour021">Q 審査を行う最高裁判所の裁判官の経歴等を知るにはどうすればいいですか？</label>
+        <div class="cp_actab-content">
+          <p>A 国民審査が行われる際には審査に付される裁判官の氏名、生年月日、経歴、最高裁判所において関与した主要な裁判等を掲載した審査公報が発行されます。
+            また、審査に付されるかどうかに関わらず、最高裁判所のホームページ<a
+              href="http://www.courts.go.jp/saikosai/about/saibankan/index.html">(http://www.courts.go.jp/saikosai/about/saibankan/index.html)</a>には、常時全ての最高裁判所裁判官についてその略歴、裁判官としての心構え、最高裁判所において関与した主要な裁判などの情報が掲載されています。
+            なお、裁判所ホームページの裁判例情報のページ<a
+              href="http://www.courts.go.jp/app/hanrei_jp/search1">(http://www.courts.go.jp/app/hanrei_jp/search1)</a>では裁判官名をキーワードに入力することで、当該裁判官が関与した裁判例を検索することができます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+      <h2><img src="{% static 'images/site_rogo.png' %}" height="44.3px" width="229.6x"></h2>
+      <p class="name">&copy;2022 INIAD Group11Team5</p>
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <ul class="menu">
+        <a href="{% url 'index' %}" class="ftop"> トップ</a> |
+        <a href="{% url 'detail' %}" class="fdetail"> 選挙とは</a> |
+        <a href="{% url 'seitou' %}" class="fseitou"> 政党</a> |
+        <a href="{% url 'kouho' %}" class="fkouho"> 候補者</a> |
+        <a href="{% url 'koe' %}" class="fkoe"> みんなの声</a> |
+        <a href="{% url 'qa' %}" class="fqa"> Q&A</a> |
+        <a href="{% url 'mail' %}" class="fmail"> メール</a>
+      </ul>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p> 〒115-8650 東京都北区赤羽台1丁目7-11 </p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> TEL: 03-5924-2100 </p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="#">contact@iniad.org </a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

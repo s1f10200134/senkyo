@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+    <h2>編集画面</h2>
+    <form action="{% url 'admin_update_s' seitou.id %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="seitou_nameInput">政党名</label>
+            <input id="seitou_nameInput" name="seitou_name" type="text" value={{ seitou.seitou_name }}
+                required="required">
+        </div>
+        <div>
+            <label for="bodyInput">政党説明</label>
+            <textarea id="bodyInput" name="body" row="3" placeholder="政党の詳細を入力してください。"
+                required="required">{{ seitou.body }}</textarea>
+        </div>
+        <hr>
+        <div>
+            <button type="submit">確認画面へ</button>
+            <button><a href="{% url 'admin_delete_s' seitou.id %}">削除</a></button>
+        </div>
+    </form>
+    <div class="back">
+        <a href="{% url 'admin_seitou' %}">一つ戻る</a>
+    </div>
+</body>
+
+</html>

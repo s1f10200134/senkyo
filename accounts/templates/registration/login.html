@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+</head>
+
+<body>    
+  <h2>管理者専用　ログインページ</h2>
+  <p>管理者専用です。一般の利用者の方は<span class="url"><a href="{% url 'index' %}">こちら</a></span></p>
+  <p>ユーザー名:admin </p><p>パスワード:passward </p><p>※oでなくaなことに注意</p>
+  {% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="ログイン" />
+      </form>
+</body>
+
+</html>

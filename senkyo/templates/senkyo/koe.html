@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/headerfooter.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_koe.css' %}">
+</head>
+
+
+<body>
+  <header>
+    <a href="{% url 'index' %}"><img src="{% static 'images/site_rogo.png' %}" height="35.44px" width="183.68x"></a>
+    <ul class="menu">
+      <a href="{% url 'detail' %}" class="hdetail">選挙で何が決まる</a>
+      <a href="{% url 'seitou' %}" class="hseitou">政党を知る</a>
+      <a href="{% url 'kouho' %}" class="hkouho">候補者を見つける</a>
+      <a href="{% url 'koe' %}" class="hkoe">みんなの声</a>
+      <a href="{% url 'qa' %}" class="hqa">Q&A</a>
+      <a href="{% url 'mail' %}" class="hmail">メール配信サービス</a>
+    </ul>
+  </header>
+
+
+  <div class="content">
+    <form action="{% url 'koe' %}" method="post">
+      {% csrf_token %}
+      <div class="cp_iptxt">
+        <label for="chat_nameInput">お名前</label>
+        <br>
+        <input id="chat_nameInput" name="chat_name" class="ef" type="text" placeholder="" required="required">
+        <span class="focus_line"></span>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+        <label for="chat_contentInput">詳細</label>
+        <br>
+        <textarea class="m-form-text" id="chat_contentInput" name="chat_content" row="3" placeholder="思ったことを書こう。"
+          required="required"></textarea>
+      </div>
+      <input type="submit" value="送信する" class="button">
+    </form>
+    <hr>
+    {% for chat in chats %}
+    <p>{{ chat.id }} : <strong><span class="koename">{{ chat.chat_name }}</span></strong> :
+      {{ chat.posted_at|date:"y/m/d (D) H:i:s" }}</p>
+    <p>{{ chat.chat_content }}</p>
+    <br>
+    {% endfor %}
+  </div>
+
+  
+  <footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+      <h2><img src="{% static 'images/site_rogo.png' %}" height="44.3px" width="229.6x"></h2>
+      <p class="name">&copy;2022 INIAD Group11Team5</p>
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <ul class="menu">
+        <a href="{% url 'index' %}" class="ftop"> トップ</a> |
+        <a href="{% url 'detail' %}" class="fdetail"> 選挙とは</a> |
+        <a href="{% url 'seitou' %}" class="fseitou"> 政党</a> |
+        <a href="{% url 'kouho' %}" class="fkouho"> 候補者</a> |
+        <a href="{% url 'koe' %}" class="fkoe"> みんなの声</a> |
+        <a href="{% url 'qa' %}" class="fqa"> Q&A</a> |
+        <a href="{% url 'mail' %}" class="fmail"> メール</a>
+      </ul>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p> 〒115-8650 東京都北区赤羽台1丁目7-11 </p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> TEL: 03-5924-2100 </p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="#">contact@iniad.org </a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

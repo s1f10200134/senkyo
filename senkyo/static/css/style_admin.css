@@ -1,0 +1,86 @@
+body {
+  margin-top: 150px;
+  font-family: sans-serif;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  padding: 0.5rem 1rem;
+  border-left: 5px solid #ff811a95;
+  background: #ffffdb;
+  font-size: 20px;
+  display: flex;
+}
+
+
+/*ボタン*/
+.back a {
+  background: #d3d3d3;
+  border-radius: 50px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 25px;
+  color: #1b2538;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.back a:hover {
+  background: #ff811a95;
+  color: #FFF;
+}
+
+.back a:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #ff811a95;
+  border-right: 3px solid #ff811a95;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.back a:hover:after {
+  border-color: #FFF;
+}
+
+/*見出し*/
+.under_kouho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  text-align: center;
+}
+
+.under_kouho::before,
+.under_kouho::after {
+  content: '';
+  width: 70px;
+  height: 3px;
+  background-color: #ff811a95;
+}
+
+.under_kouho::before {
+  margin-right: 20px;
+}
+
+.under_kouho::after {
+  margin-left: 20px;
+}
+
+.url a {
+  color: blue;
+  text-decoration: underline;
+}

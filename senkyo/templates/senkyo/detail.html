@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/headerfooter.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_detail.css' %}">
+</head>
+
+<body>
+  <header>
+    <a href="{% url 'index' %}"><img src="{% static 'images/site_rogo.png' %}" height="35.44px" width="183.68x"></a>
+    <ul class="menu">
+      <a href="{% url 'detail' %}" class="hdetail">選挙で何が決まる</a>
+      <a href="{% url 'seitou' %}" class="hseitou">政党を知る</a>
+      <a href="{% url 'kouho' %}" class="hkouho">候補者を見つける</a>
+      <a href="{% url 'koe' %}" class="hkoe">みんなの声</a>
+      <a href="{% url 'qa' %}" class="hqa">Q&A</a>
+      <a href="{% url 'mail' %}" class="hmail">メール配信サービス</a>
+    </ul>
+  </header>
+
+
+
+  <div class="content">
+    <p><span class="title">はじめに</span></p><br>
+    <h3>このページでは選挙をする意義から投票のやり方・種類までを簡易的に説明します。選挙は決して他人に強制されて行くものではありません。知名度のある有名人に対する人気投票でもありません。
+      皆さんの暮らしを少しでも良くするための政治を運営する代表を決めるために行うものです。<h2>たった一人の、たった一票が、未来の政治には必要なのです。</h2>
+    </h3><br>
+    <p><span class="title2">選挙の意義</span></p>
+    <p><span class="subtitle5">・日本は国民が主権を持つ民主主義国家です。民主政治の原則である多数決は人々(代表者)の意見を集約し、決定する際に用いる方法です。</span></p>
+    <p><span class="subtitle5">・選挙は国民の代表を選び国民の意見を政治に反映させるためのものです。私たち国民が政治に参加できる最も重要かつ基本的な機会と言えます。</span></p>
+    <p><span class="subtitle5">・選挙によって選ばれた代表者は、国民や住民の代表者となります。すべての国民や住民のために政治を行います。</span></p><br><br>
+
+    <p><span class="title2">選挙権と被選挙権</span></p>
+    <p><span class="subtitle">・選挙権とは立候補者に投票することのできる権利です。日本国民で満18歳以上であることが条件となります。</span></p>
+    <p><span class="subtitle2">▶18年目の誕生日の前日の午前0時から満18歳とされます。</span></p>
+    <p><span class="subtitle2">▶引き続き3カ月以上その都道府県内の同一市区町村に住所がある必要があります。(都道府県議会、市区町村)</span></p><br>
+    <p><span class="subtitle">・被選挙権とは国民の代表として議員に就くことのできる権利です。</span></p>
+    <p><span class="subtitle2">▶日本国民で満25歳以上:衆議院、都道府県議会、市区町村議会(OO長も含む)</span></p>
+    <p><span class="subtitle2">▶日本国民で満30歳以上:参議院、都道府県知事</span></p><br><br>
+
+    <p><span class="title2">選挙の種類</span></p>
+    <p><span class="subtitle">1. 衆議院議員総選挙とは、衆議院議員の全員を選ぶために行われる選挙です。</span></p>
+    <p><span class="subtitle2">・小選挙区選挙(289人選出)と比例代表選挙(176人選出)が、同じ投票日に行われます。</span></p>
+    <p><span class="subtitle2">・衆議院議員の任期満了（4年）によるものと、衆議院の解散によって行われるものの2つがあります。</span></p><br>
+    <p><span class="subtitle">2. 参議院議員通常選挙とは、参議院議員の半数を選ぶための選挙です。</span></p>
+    <p><span class="subtitle2">・参議院議員は常に任期満了（6年）の半分、3年ごと定数の半分を選ぶように憲法で定められています。</span></p>
+    <p><span class="subtitle2">・参議院議員の定数は248人で、うち100人が比例代表選出議員、148人が選挙区選出議員です。</span></p><br>
+    <p><span class="subtitle">3. 一般の選挙（地方選挙）</span></p>
+    <p><span class="subtitle2">・一般選挙（地方の議会）</span></p>
+    <p><span class="subtitle3">① 地方公共団体の議会の議員全員を選ぶ選挙です。任期満了（4年）のほか、議会の解散などによっても行われます。</span></p><br>
+    <p><span class="subtitle2">・地方公共団体の長の選挙</span></p>
+    <p><span class="subtitle3">② 地方公共団体の長(知事など)を選ぶ選挙です。任期満了（4年）のほか住民の直接請求（リコール）による解職、<span
+          class="subtitle3">不信任議決による失職、死亡、退職、被選挙権の喪失による失職によっても行われます。</span></span></p><br>
+    <p><span class="subtitle2">・設置選挙</span></p>
+    <p> <span class="subtitle3">③ 新しい地方公共団体が設置された場合に、その議会の議員と長を選ぶために行われる選挙です。</span></p><br>
+    <p><span class="subtitle">4. 特別の選挙（国政／地方選挙）</span></p>
+    <p><span class="subtitle2">・再選挙（選挙のやり直しや当選人の不足を補う）</span></p>
+    <p><span class="subtitle3">① 必要な数だけの当選人が決まらない、投票日の後で当選人の死亡、当選の無効があったなどの場合で、<br><span
+          class="subtitle3">しかも繰り上げ当選（繰り上げる場合がある）などによっても当選人がなお不足する場合に行われる選挙です。</span></span></p>
+    <p><span class="subtitle4">1. 一人でも不足する時に行われるものと、不足が一定数に達した時に行われるものがあります。</span></p><br>
+    <p><span class="subtitle2">・補欠選挙（議員の不足を補う）</span></p>
+    <p><span class="subtitle3"> ② 選挙の当選人が議員となった後に死亡や退職、そして繰り上げ当選によっても議員の定数が不足する場合に行われる選挙です。</span></p>
+    <p><span class="subtitle4">1. 再選挙とは、その人がすでに議員であるかないかという点が違います。</span></p>
+    <p><span class="subtitle4">2. すでに議員であっても選挙違反などにより当選や選挙自体が無効となった場合は再選挙となります。</span></p><br>
+    <p><span class="subtitle2">・増員選挙（議員の数を増やす）</span></p>
+    <p><span class="subtitle3">③ 議員の任期中に、議員の定数を増やして行われる地方公共団体の議会の議員の選挙です。<br><span
+          class="subtitle3">※任期が終わる6カ月以内に当該選挙を行うべき事由が生じた場合には、</span><span
+          class="subtitle3">議員の数が定員の3分の2に達しなくなったときを除いて行わないこととされています。</span></span></p><br><br>
+
+    <p><span class="title2">投票</span></p>
+    <p><span class="subtitle">
+        <h3>・多くの市区町村では、有権者に対して投票日前に入場券や案内などの通知が配布されます。投票所へ持参してください。</h3>
+      </span></p>
+    <p><span class="subtitle">
+        <h3>・選挙人と一緒の子供や補助者・介護者なども投票所に入ることもできます。</h3>
+      </span></p>
+    <p><span class="subtitle2">(午前7時から午後8時まで入場可能)</span></p>
+    <p><span class="subtitle">投票の流れ：</span></p>
+    <p><span class="subtitle2">▶入り口から入り、受付で本人確認を行います。</span></p>
+    <p><span class="subtitle2">▶投票用紙を受け取り、記載台で候補者名などを記載します。</span></p>
+    <p><span class="subtitle2">▶投票箱へ投票し、出口から帰ります。</span></p><br>
+    <p><span class="subtitle">・その他の投票の仕方</span></p>
+    <p><span class="subtitle2">▶代理投票</span></p>
+    <p><span class="subtitle3">〇投票用紙に文字を記入できない選挙人のための制度です。投票管理者に申請し、補助者2名が投票の手続き・確認を行います。</span></p>
+    <p><span class="subtitle3">〇視覚への障害を持つ人も投票が行えるように、投票所には、点字投票用の投票用紙や点字器が用意されています。(点字投票)</span></p>
+    <p><span class="subtitle2">▶自書式投票</span></p>
+    <p><span class="subtitle3">〇選挙人本人が自分で候補者の氏名や政党名を書く方式</span></p>
+    <p><span class="subtitle2">▶記号式投票</span></p>
+    <p><span class="subtitle3">〇あらかじめ投票用紙に印刷された候補者名に〇の印をつけて投票。地方公共団体の議員や長の選挙について採用できます。<span
+          class="subtitle3">(地域の条例による)</span></span></p>
+    <p><span class="subtitle2">▶電子投票</span></p>
+    <p><span class="subtitle3">〇選挙の公正で適正な執行と開票事務のスムーズな進行を目的とし、電磁的記録式投票機（電子投票機）を用いて行う。</span></p><br><br>
+    <p><span class="title2">投票制度</span></p>
+    <h3>選挙期日に投票に行けない、仕事や旅行などで住んでいる地域以外の場所にいる、海外に住んでいるなどさまざまな状況を考慮した仕組みがあります。</h3>
+    <p><span class="subtitle">・期日前投票制度</span></p>
+    <p><span class="subtitle2">▶選挙期日前でも、選挙期日と同じ方法で投票を行うことができます。</span></p>
+    <p><span class="subtitle2">▶投票期間は、選挙期日の公示日または告示日の翌日から選挙期日の前日までの間です。</span></p>
+    <p><span class="subtitle2">▶投票場所は、各市区町村に1力所以上設けられる「期日前投票所」です。</span></p><br>
+    <p><span class="subtitle">・不在者投票制度</span></p>
+    <p><span class="subtitle2">▶仕事や旅行、指定病院等への入院等で名簿登録地以外の市区町村に滞在している場合、滞在先で不在者投票ができます。</span></p><br>
+    <p><span class="subtitle">・特例郵便等投票制度</span></p>
+    <p><span class="subtitle2">▶新型コロナウイルス感染症で宿泊・自宅療養等をしている方で一定の要件に該当する方は、</span>
+      <span class="subtitle2">令和3年6月23日以後にその期日を公示又は告示される選挙から「特例郵便等投票」ができます。</span></p><br>
+    <p><span class="subtitle">・在外選挙制度</span></p>
+    <p><span class="subtitle2">▶仕事や留学などで海外に住んでいる人が外国にいながら国政選挙に投票できる制度です。</span>
+      <span class="subtitle2">日本国籍を持つ18歳以上の有権者で、在外選挙人名簿に登録され在外選挙人証を持っている人が可能になります。</span></p>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+      <h2><img src="{% static 'images/site_rogo.png' %}" height="44.3px" width="229.6x"></h2>
+      <p class="name">&copy;2022 INIAD Group11Team5</p>
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <ul class="menu">
+        <a href="{% url 'index' %}" class="ftop"> トップ</a> |
+        <a href="{% url 'detail' %}" class="fdetail"> 選挙とは</a> |
+        <a href="{% url 'seitou' %}" class="fseitou"> 政党</a> |
+        <a href="{% url 'kouho' %}" class="fkouho"> 候補者</a> |
+        <a href="{% url 'koe' %}" class="fkoe"> みんなの声</a> |
+        <a href="{% url 'qa' %}" class="fqa"> Q&A</a> |
+        <a href="{% url 'mail' %}" class="fmail"> メール</a>
+      </ul>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p> 〒115-8650 東京都北区赤羽台1丁目7-11 </p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> TEL: 03-5924-2100 </p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="#">contact@iniad.org </a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+body{
+  overflow-x: hidden;
+}
+
+/*上書き部分*/
+header {
+  border-bottom: #EA4134 solid 2px;
+}
+
+header .menu a.hkoe {
+  color: #EA4134;
+}
+
+/*専用部分*/
+.content {
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0px 264px 0px 264px;
+}
+
+/*name*/
+.cp_iptxt {
+  position: relative;
+  width: 70%;
+  padding-left: 300px;
+}
+
+.cp_iptxt input[type='text'] {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 70%;
+  letter-spacing: 1px;
+  padding-left: 4em;
+  font-size: 25px;
+}
+
+.cp_iptxt input[type='text']:focus {
+  outline: none;
+}
+
+.ef {
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+}
+
+.ef~.focus_line {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 2px;
+}
+
+.ef~.focus_line:before,
+.ef~.focus_line:after {
+  position: absolute;
+  bottom: 0;
+  left: 385px;
+  width: 0;
+  height: 100%;
+  content: '';
+  transition: 0.4s;
+  background-color: #DA3C41;
+}
+
+.ef~.focus_line:after {
+  right: 0;
+  left: auto;
+}
+
+.ef:focus~.focus_line:before,
+.ef:focus~.focus_line:after,
+.cp_iptxt.ef~.focus_line:before,
+.cp_iptxt.ef~.focus_line:after {
+  width: 50%;
+  transition: 0.4s;
+}
+
+.ef~label {
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 0;
+  width: 70%;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  color: #AAAAAA;
+}
+
+.ef:focus~label,
+.cp_iptxt.ef~label {
+  font-size: 12px;
+  top: -16px;
+  transition: 0.3s;
+  color: #EA4134;
+}
+
+/*box*/
+.m-form-text {
+  height: 8em;
+  width: 67%;
+  padding: 20px 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 2px #ccc inset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 18px;
+}
+
+.m-form-text:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px #EA4134 inset;
+}
+
+::placeholder {
+  text-align: left;
+}
+
+/*提出ボタン*/
+.button {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: #ee554a;
+  color: #FFFFFF;
+  line-height: 1em;
+  transition: .3s;
+  border: 2px solid #ee554a;
+  margin: 10px 840px 10px;
+}
+
+.button:hover {
+  color: #222222;
+  background: #FFFFFF;
+}
+
+.koename {
+  color: blue;
+  text-decoration: underline;
+}

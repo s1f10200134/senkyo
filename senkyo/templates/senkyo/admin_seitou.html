@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+  <h2><span class="under_seitou">編集するには政党名をクリックしてください。</span></h2>
+  {% for seitou in seitous %}
+  <p>
+    <span class="seitou_name"><button><a
+          href="{% url 'admin_update_s' seitou.id %}">{{ seitou.seitou_name }}</a></button></span>
+  </p>
+  {% endfor %}
+  <hr>
+  <div class="back">
+    <a href="{% url 'admin_index' %}">TOPに戻る</a>
+  </div>
+</body>
+
+</html>

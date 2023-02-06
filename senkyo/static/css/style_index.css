@@ -1,0 +1,34 @@
+/*上書き部分*/
+body {
+  margin-top: 110px;
+}
+
+/*専用部分*/
+.content {
+  display: flex;
+  padding-left: 60px;
+}
+
+.main{
+  padding-left: 90px;
+  padding-right: 40px;
+}
+
+.item {
+  padding-left: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item a {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 60px;
+  margin-bottom: 10px;
+}
+
+.item_upper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

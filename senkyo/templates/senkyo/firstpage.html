@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style_first.css' %}">
+</head>
+
+<body>
+    <a href="{% url 'index' %}"><img src="{% static 'images/site_rogo.png' %}" height="176px" width="916x"></a>
+
+
+    <p>こちらは講義の一環で作成したデモ版のサイトです。</p>
+    <p>バグ等がある場合がございます。予めご了承ください。。</p>
+    <p><a href="{% url 'index' %}">サイトはこちら</a></p>
+
+</body>
+
+</html>

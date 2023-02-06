@@ -1,0 +1,98 @@
+/*上書き部分*/
+header {
+  border-bottom: #FFD700 solid 2px;
+}
+
+header .menu a.hdetail {
+  color: #FFD700;
+}
+
+
+
+/*専用部分*/
+.content {
+  text-align: left;
+  padding: 0px 264px 0px 264px;
+  word-break: keep-all;
+}
+
+.title {
+  font-size: 35px;
+  color: #FFD700;
+  font-weight: 800;
+  display: flex;
+  border-bottom: solid 5px #87CEFA;
+}
+
+.title2 {
+  font-size: 25px;
+  color: #FFD700;
+  font-weight: 800;
+  display: flex;
+}
+
+.subtitle {
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  background: linear-gradient(transparent 70%, #ffff99 40%);
+}
+
+.subtitle2 {
+  padding-left: 30px;
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+}
+
+.subtitle3 {
+  padding-left: 60px;
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+.subtitle4 {
+  padding-left: 140px;
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+.subtitle5 {
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+h2 {
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+h3 {
+  color: #555555;
+  font-family: sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}

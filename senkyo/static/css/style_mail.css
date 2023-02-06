@@ -1,0 +1,107 @@
+/*上書き部分*/
+body {
+  text-align: center;
+}
+
+header {
+  border-bottom: #8b3cb3 solid 2px;
+}
+
+header .menu a.hmail {
+  color: #8b3cb3;
+}
+
+/*専用部分*/
+.content {
+  padding-left: 6px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin: 40px 0 30px 0;
+}
+
+.content h3 {
+  font-size: 16px;
+  margin: 110px 0 20px 0;
+}
+
+/*ボタン*/
+.back button {
+  background: #d3d3d3;
+  border-radius: 50px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 50px;
+  color: #1b2538;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.back button:hover {
+  background: #8b3cb3;
+  color: #FFF;
+}
+
+.back button:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #8b3cb3;
+  border-right: 3px solid #8b3cb3;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.back button:hover:after {
+  border-color: #FFF;
+}
+
+.url a {
+  color: blue;
+  text-decoration: underline;
+}
+
+label[for="usernameInput"] {
+  margin-right: 72px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*政党名検索*/
+label[for="mailInput"] {
+  margin-right: 57px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*政策で検索*/
+label[for="secondmailInput"] {
+  margin-right: 9px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*ボックス*/
+input[type="text"] {
+  padding: 0.2em 1em;
+  margin: 1em 0;
+  font-weight: bold;
+  border: solid 2px #000000;
+}
+
+input[type="email"] {
+  padding: 0.2em 1em;
+  margin: 1em 0;
+  font-weight: bold;
+  border: solid 2px #000000;
+}

@@ -1,0 +1,134 @@
+/*上書き部分*/
+body {
+  text-align: center;
+}
+
+header {
+  border-bottom: #ffa500 solid 2px;
+}
+
+header .menu a.hkouho {
+  color: #ffa500;
+}
+
+/*専用部分*/
+.content {
+  text-align: left;
+  padding: 0px 100px 70px 100px;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.title {
+  padding: 0.5rem 1rem;
+  border-left: 5px solid #ff811a95;
+  background: #FFFFDB;
+  font-size: 20px;
+  display: flex;
+}
+
+/*ボタン*/
+.back {
+  padding-top: 50px;
+}
+
+.back a {
+  background: #D3D3D3;
+  border-radius: 70px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 25px;
+  color: #1B2538;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.back a:hover {
+  background: #ff811a95;
+  color: #FFF;
+}
+
+.back a:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #ff811a95;
+  border-right: 3px solid #ff811a95;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.back a:hover:after {
+  border-color: #FFF;
+}
+
+/*カードデザイン*/
+.content.back {
+  display: block;
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 210px;
+}
+
+.prof {
+  margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 2%;
+  background-color: #F8DFD2;
+  width: 400px;
+  border-radius: 15px;
+  line-height: 30px;
+  display: flex;
+}
+
+.prof_left {
+  text-align: left;
+}
+
+.prof_right {
+  margin-left: 15px;
+  text-align: left;
+  bottom: 0;
+}
+
+.prof_right h5{
+  text-align: center;
+}
+
+.prof_right strong {
+  color: #FF773E;
+}
+
+.sns {
+  margin-left: 10px;
+}
+
+.sns a{
+  margin-left: 20px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+.footer {
+  margin-top: 200px;
+}

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style_admin.css' %}">
+</head>
+
+<body>
+    <h2>確認画面</h2>
+    <hr>
+    <img src="{% static 'images/kao.jpeg' %}" alt="顔写真イメージ" height="120px" width="80px">
+    <p><strong>氏名: </strong>{{ kouho.name }} ({{ kouho.age }}) </p>
+    <p><strong>所属政党:</strong> {{ kouho.tou }}</p>
+    <p><strong>経歴:</strong> {{ kouho.career }}</p>
+    <p><strong>公約: [{{ kouho.manifesto_class }}]</strong></p>
+    <p>{{ kouho.manifesto }}</p>
+    <p>
+        <p><img src="{% static 'images/instagram.png' %}" alt="インスタグラム" height="40px" width="40px">
+            {{ kouho.instagram }} <button><a href={{ kouho.instagram }}>URLを確認</a></button></p>
+        <p><img src="{% static 'images/twitter.png' %}" alt="ツイッター" height="40px" width="40px"> {{ kouho.twitter }}
+            <button><a href={{ kouho.twitter }}>URLを確認</a></button></p>
+        <p><img src="{% static 'images/facebook.png' %}" alt="フェイスブック" height="40px" width="40px"> {{ kouho.facebook }}
+            <button><a href={{ kouho.facebook }}>URLを確認</a></button></p>
+    </p>
+    <hr>
+    <div class="back">
+        <p><a href="{% url 'admin_update' kouho.id %}">編集・削除する</a></p>
+        <p><a href="{% url 'admin_kouho' %}">編集完了</a></p>
+    </div>
+</body>
+
+</html>
